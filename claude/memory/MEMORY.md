@@ -40,3 +40,4 @@
 - [Canvas CSV format](canvas-csv-format.md) — 7-col canvas CSV (tag,entity_type,name,description,sheet_image_url,variant_of,variant_label); one URL per row
 - [Creative audits Oct batch](creative-audits-batch-oct.md) — 4-show creative audits at ~/projects/creative-audits, port 8901; reusable orchestration in _prompts/
 - [Comment blocks analysis](comment-blocks-project.md) — WOBM vs TAB comment/voice/activation reports; ~/projects/comment-blocks port 8653; public at tequilatejas.github.io/wobm-activation-voice
+- [claude-setup repo](claude-setup-repo.md) — private dotfiles repo at ~/projects/claude-setup; install.sh symlinks config onto new Macs, sync.sh pushes changes
