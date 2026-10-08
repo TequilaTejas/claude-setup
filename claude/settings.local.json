@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(brew --version)",
+      "Bash(curl -s https://api.github.com/repos/cli/cli/releases/latest)",
+      "Bash(gh auth *)",
+      "Bash(gh search *)",
+      "Bash(gh api *)",
+      "Bash(curl -sS -I -H \"Authorization: token $\\(gh auth token\\)\" https://api.github.com/user)",
+      "Bash(gh repo *)",
+      "WebFetch(domain:tympanus.net)",
+      "WebFetch(domain:gsap.com)",
+      "Bash(command -v brew)",
+      "Bash(command -v kitty)",
+      "Bash(echo \"brew: $\\(command -v brew || echo MISSING\\)\")",
+      "Bash(echo \"kitty: $\\(command -v kitty || echo MISSING\\)\")",
+      "Read(//Applications/**)",
+      "Bash(/opt/homebrew/bin/brew install *)",
+      "Read(//opt/homebrew/lib/node_modules/@openai/codex/bin/**)",
+      "Bash(/opt/homebrew/bin/codex --version)",
+      "Bash(open \"http://localhost:8765/\")",
+      "Bash(zsh -lic 'codex --version')"
+    ]
+  }
+}

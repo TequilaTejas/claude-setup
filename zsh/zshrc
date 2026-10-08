@@ -1,0 +1,90 @@
+export PATH="$HOME/.local/bin:$PATH"
+
+alias yolo='claude --dangerously-skip-permissions'
+
+# --- Worktree + kitty helpers ---
+# wt <branch>   create a sibling worktree for <branch> and open it in a new kitty tab
+wt() {
+  local branch="$1"
+  if [ -z "$branch" ]; then
+    echo "usage: wt <branch-name>"
+    return 1
+  fi
+  local repo_root
+  repo_root=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [ -z "$repo_root" ]; then
+    echo "not inside a git repo"
+    return 1
+  fi
+  local repo_name
+  repo_name=$(basename "$repo_root")
+  local wt_dir="${repo_root}-wt-${branch}"
+
+  if [ -d "$wt_dir" ]; then
+    echo "worktree already exists: $wt_dir"
+  elif git show-ref --verify --quiet "refs/heads/$branch"; then
+    git worktree add "$wt_dir" "$branch" || return 1
+  else
+    git worktree add -b "$branch" "$wt_dir" || return 1
+  fi
+
+  if [ -n "$KITTY_LISTEN_ON" ]; then
+    kitty @ launch --type=tab --tab-title "${repo_name}:${branch}" --cwd "$wt_dir" zsh -ic claude
+  else
+    cd "$wt_dir"
+  fi
+}
+
+# wtls          list worktrees for the current repo
+wtls() {
+  git worktree list
+}
+
+# wtrm <branch>  remove the sibling worktree for <branch> (does not delete the branch itself)
+wtrm() {
+  local branch="$1"
+  if [ -z "$branch" ]; then
+    echo "usage: wtrm <branch-name>"
+    return 1
+  fi
+  local repo_root
+  repo_root=$(git rev-parse --show-toplevel 2>/dev/null)
+  if [ -z "$repo_root" ]; then
+    echo "not inside a git repo"
+    return 1
+  fi
+  local wt_dir="${repo_root}-wt-${branch}"
+  git worktree remove "$wt_dir"
+}
+
+# work          if this kitty window is a single, untouched tab with nothing
+#               running in it, take it over (dashboard + project tabs, in
+#               place). Otherwise open a separate new kitty window, so an
+#               existing session with other stuff going on isn't disturbed.
+work() {
+  if [ -n "$KITTY_LISTEN_ON" ] && [ -n "$KITTY_WINDOW_ID" ]; then
+    local is_fresh
+    is_fresh=$(kitty @ ls 2>/dev/null | jq --argjson wid "$KITTY_WINDOW_ID" '
+      [.[] | select(any(.tabs[].windows[]?; .id == $wid))][0] as $osw |
+      ($osw.tabs | length) == 1 and
+      ($osw.tabs[0].windows | length) == 1 and
+      (($osw.tabs[0].windows[0].cmdline // []) | join(" ") | test("claude|ccmon") | not)
+    ' 2>/dev/null)
+
+    if [ "$is_fresh" = "true" ]; then
+      kitty @ set-tab-title "dashboard" >/dev/null 2>&1
+      kitty @ launch --type=tab --cwd ~/projects/onething zsh -ic claude >/dev/null 2>&1
+      kitty @ launch --type=tab --cwd ~/projects/tejasdua.com zsh -ic claude >/dev/null 2>&1
+      exec "$HOME/projects/ccmon/ccmon"
+    fi
+  fi
+
+  kitty --session ~/.config/kitty/work.session >/dev/null 2>&1 &
+  disown
+}
+
+# dashboard     the same read-only session monitor that is tab 1 of `work`,
+#               launchable on its own in any terminal
+dashboard() {
+  "$HOME/projects/ccmon/ccmon"
+}

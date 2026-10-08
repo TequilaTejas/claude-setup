@@ -1,0 +1,42 @@
+# Memory Index
+
+- [ADHD output style](adhd-output-style.md) — always apply i-have-adhd skill: action-first, numbered steps, no preamble, state restated each turn
+- [Crazy-four skill](crazy-four-skill.md) — before any screen design, pitch 4 divergent approaches (flow/layout/info/UI tech) and let Tejas pick
+- [Jupiter EMI project](jupiter-emi-project.md) — overdue-EMI assistant design at ~/projects/jupiter-emi; home base approved, locked decisions listed, entry design in progress
+
+- [Tejas's profile](tejas-profile.md) — product designer first at Presentations.ai, ex Hotstar/Navi, codes via Claude Code & Codex
+- [Portfolio project](portfolio-project.md) — TequilaTejas/portfolio, minimal /life aesthetic won; loud PhonePe style rejected
+- [Tejas-100x portfolio](tejas-100x-portfolio.md) — LIVE at tejasdua.com; rachitdesign clone at ~/projects/tejas-100x, repo tejasdua-portfolio, push to deploy
+- [tejasdua.com site](tejasdua-com-site.md) — OLD retro-arcade portfolio; domain moved to tejas-100x 2026-08-19, still at tequilatejas.github.io/tejasdua.com
+- [OneThing app](onething-app.md) — native macOS single-task focus app at ~/projects/onething; completion-based sessions, retype-task-to-quit friction
+- [Multi-agent tmux setup](multi-agent-tmux-setup.md) — tmux+worktrees for parallel agents; `wt`/`wtls`/`wtrm`/`work` in ~/.zshrc, git-aware statuslines
+- [Cutroom project](cutroom-project.md) — agentic IG-reels cutting room at ~/projects/cutroom; pipeline v2: 4 craft stages, video-in-QuickTime reviews, Sonnet crew
+- [Hocus Store project](hocus-store-project.md) — Horcus creator storefront at ~/projects/hocus-store; origin=TequilaTejas, staging on GitHub Pages, port 8642 preview
+- [Fyrr Store project](fyrr-store-project.md) — green (#74F994) fork of hocus-store at ~/projects/fyrr-store; TequilaTejas/fyrr-store, Pages staging, port 8643
+- [ASCII orchestration diagrams](ascii-orchestration-diagrams.md) — always include ASCII agent-flow diagrams in plans; mark checkpoints, loops, fan-outs
+- [Intro scrollytelling page](tejas-intro-page.md) — self-intro at ~/projects/tejas-intro; v4 current: faithful zero.university system (green mat, serif+script, UI cards, board footer); v1–v3 kept
+- [PAI dashboard clone](pai-dashboard-project.md) — presentations.ai rebrand of Gamma's dashboard exploration at ~/projects/pai-dashboard; static, port 8644 preview
+- [Nudge simulators](nudge-system-design-simulators.md) — all 5 branch sims live at tequilatejas.github.io/nudge-system-design (snapshot mirror); no push access to upstream tejasdua143 repo
+- [No names before join](no-names-before-join.md) — UX copy: no agent names/pronouns ("Anita", "she") until the human actually joins; formal terms only
+- [Review docs on localhost](review-docs-localhost.md) — serve review HTML via local http.server + `open`, never Claude artifacts
+- [Model split: build vs plan](model-split-build-vs-plan.md) — Sonnet/Opus agents write code; Fable plans, orchestrates, reviews
+- [Undertow project](undertow-project.md) — macOS attention copilot at ~/projects/undertow; LLM judge vs declared intent; M0 in progress
+- [Lockin project](lockin-project.md) — menu bar window/tab lock (ex-Anchor) at ~/projects/anchor; PUBLIC TequilaTejas/lockin; instrument-v4 panel design + Esc-hold HUD uncommitted; snapshot-harness design flow
+- [Pacer project](pacer-project.md) — timer + whiteboard-interview coach; live at tequilatejas.github.io/pacer, port 8645, Tejas's 13-step framework baked in
+- [Previews in Dia](previews-in-dia.md) — open localhost previews with `open -a "Dia"` by default
+- [Ride scheduler redesign](ride-scheduler-redesign.md) — arrive-by planner beat slot grid; 4 variants live on port 8647, files in scratchpad (ephemeral)
+- [Verify visual output](verify-visual-output.md) — render and eyeball compressed/converted files vs original before delivering; per-image pikepdf beats gs presets
+- [Tejas-folio project](tejas-folio-project.md) — paul.best-style portfolio rebuild at ~/projects/tejas-folio; port 8648, Fraunces/Plex Mono stand-ins
+- [Tejas-ulvin portfolio](tejas-ulvin-portfolio.md) — ulvin.xyz-style canvas portfolio at ~/projects/tejas-ulvin; 8 pages, port 8649, placeholder photos to swap
+- [EMI success screen](emi-success-screen.md) — 4-state EMI payment prototype (success/partial/failed/prepay); LIVE at tequilatejas.github.io/emi-success; port 8650 local
+- [EMI AI showcase](emi-ai-showcase.md) — workflow showcase (copy engine + crazy-four) at ~/projects/emi-ai-showcase; LIVE at tequilatejas.github.io/emi-ai-showcase; staged before-screen disclosed
+- [Romantasy AOP annotated](romantasy-aop-project.md) — cloned Pocket FM AOP report + Docs-Rail comment/highlight layer at ~/projects/romantasy-aop, port 8652
+- [TAB benchmark data](tab-benchmark-data.md) — canonical TAB at ~/Downloads/TAB Data/TAB_FULL_701eps.csv (701 eps); non-spec column names
+- [Cliff-donor project](cliff-donor-project.md) — 5 Pocket FM show lanes at ~/projects/cliff-donor, tmux session "cliff"; blocked on data packs
+- [Episodic retention report format](episodic-retention-report-format.md) — standalone xlsx reports: always benchmark vs TAB, find 3-4+ spike clusters, page 1 leads with recommendations
+- [Scentless Yet Chosen audit](scentless-yet-chosen-audit.md) — creative audit of 327-ep werewolf romance at ~/projects/scentless-yet-chosen-audit, port 8899; two-couple structure, title leads absent from finale
+- [WOBM multicast reskins](wobm-multicast-reskins.md) — copy WOBM speaker labels onto 5 reskin scripts; annotate.py at ~/projects/wobm-multicast; all 5 done
+- [APM resume](apm-resume.md) — ~/projects/resume HTML→PDF, v3 current; sole PM+design at Presentations.ai (10M users/50K DAU), no invented metrics
+- [Canvas CSV format](canvas-csv-format.md) — 7-col canvas CSV (tag,entity_type,name,description,sheet_image_url,variant_of,variant_label); one URL per row
+- [Creative audits Oct batch](creative-audits-batch-oct.md) — 4-show creative audits at ~/projects/creative-audits, port 8901; reusable orchestration in _prompts/
+- [Comment blocks analysis](comment-blocks-project.md) — WOBM vs TAB comment/voice/activation reports; ~/projects/comment-blocks port 8653; public at tequilatejas.github.io/wobm-activation-voice

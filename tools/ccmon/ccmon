@@ -1,0 +1,3 @@
+#!/bin/bash
+# Launch the read-only Claude Code session monitor.
+exec /usr/bin/python3 "$(dirname "$0")/app.py" "$@"

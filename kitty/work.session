@@ -1,0 +1,11 @@
+new_tab dashboard
+cd ~
+launch /Users/tejas/projects/ccmon/ccmon
+
+new_tab onething
+cd ~/projects/onething
+launch zsh -ic claude
+
+new_tab tejasdua
+cd ~/projects/tejasdua.com
+launch zsh -ic claude
