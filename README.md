@@ -4,13 +4,13 @@ My Claude Code, kitty, tmux and shell setup. Clone it on a new Mac, run one scri
 
 ## New Mac
 
+Open Terminal and paste:
+
 ```bash
-xcode-select --install          # git, if missing
-git clone https://github.com/TequilaTejas/claude-setup.git ~/projects/claude-setup
-~/projects/claude-setup/install.sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/TequilaTejas/mac-setup/main/go.sh)"
 ```
 
-The script prints the remaining manual logins when it finishes (GitHub, Claude, Codex, Mobbin MCP).
+You approve two things: your Mac password (Homebrew) and GitHub in the browser. The script then installs everything and opens Claude Code for you to log in.
 
 `install.sh` symlinks each file from this repo into place. When Claude Code edits `settings.json`, writes a memory, or you add a skill, the change lands in this repo. Any file it replaces goes to `~/.dotfiles-backup/<timestamp>/`.
 
