@@ -41,3 +41,6 @@
 - [Creative audits Oct batch](creative-audits-batch-oct.md) — 4-show creative audits at ~/projects/creative-audits, port 8901; reusable orchestration in _prompts/
 - [Comment blocks analysis](comment-blocks-project.md) — WOBM vs TAB comment/voice/activation reports; ~/projects/comment-blocks port 8653; public at tequilatejas.github.io/wobm-activation-voice
 - [claude-setup repo](claude-setup-repo.md) — private dotfiles repo at ~/projects/claude-setup; install.sh symlinks config onto new Macs, sync.sh pushes changes
+- [Dragon world kit](dragon-world-kit.md) — ~/world-kits/dragon (port 8902) + screen-only edition ~/world-kits/dragon-screen (port 8903); reusable scripts/
+- [Vampire world kit](vampire-world-kit.md) — ~/world-kits/vampire; vampire-only, famous screen+books only; 9 sources, QA 892/892
+- [Alpha's Bride werewolf kit](alphas-bride-werewolf-kit.md) — single-show werewolf kit, ~/world-kits/alphas-bride; 701 eps, werewolf-only recasts

@@ -17,3 +17,5 @@ Headline findings:
 - The Vampire Prince (665 eps, 20 acts): 8 breaks; leads absent 376-500 for side couples (pause for Evie); Gavriel ~replaced 593-665; H12 left open as sequel tease.
 
 **Process lessons (apply next run):** give every agent a private `mktemp -d` dir (shared scratchpad collided across shows with same ep ranges); normalise lead keys before merge; never merge arcs until file count == expected windows; leads-repair needed for alias leads (Gavrael=Gavriel). Orchestration scripts in `_prompts/` (gen.py, next.py queue, normalize.py, harvest.py, AUTHOR_SPEC.md, CLUSTER_SPEC.md) are reusable. Related: [[scentless-yet-chosen-audit]].
+
+**2026-10-08 · Mr. Cortez (The Royal Accident):** single ~5.4K-word ad/pilot script (no ep headers, ends on install CTA) → full pipeline skipped; hand-read scaled audit at `mr-cortez/audit.html` (6 inferred segments S1–S6, Q1–Q8). Headline: cold open sells revenge, minute 21 makes Javier a co-victim, final cliff is love-triangle jealousy (Sophie the drugger not linked back). Short scripts → do the scaled version, don't spin up agents.

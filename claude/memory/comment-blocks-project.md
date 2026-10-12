@@ -10,3 +10,5 @@ Key finding: WOBM complains less than TAB overall (50% vs 76%) but spikes on voi
 **Why:** user wanted block-wise problem % benchmarked vs TAB. **How to apply:** reuse taxonomy/render pipeline for other shows; see [[tab-benchmark-data]], [[wobm-multicast-reskins]]. Parallel agents sharing the scratchpad clobbered each other's temp files: tell agents to use unique temp names.
 
 Update 2026-10-08: summary report (activation + voice) at summary.html via summary_render.py. PUBLIC at https://tequilatejas.github.io/wobm-activation-voice/ (repo TequilaTejas/wobm-activation-voice; site copy in ~/projects/wobm-activation-voice-site, index=summary, blocks.html=block report). User chose public Pages over artifact. Activation data source: ~/projects/wobm-activation (port 8654).
+
+Update 2026-10-08 (2): Nov–Dec 2025 comment exports (WOBM 2,495 1 Nov–30 Dec 25; TAB 10k 23 Nov–30 Dec 25) got the same 4-report set at ~/projects/comment-blocks-novdec25, port 8656 (8655 is taken by another project). Finding: WOBM eps 1–4 were redone with a new narrator around the rename from "Blood Moon Academy"; seam at ep 5; TAB's seam at ep 11. Ep 64 is a duplicated chapter.
